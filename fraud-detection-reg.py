@@ -161,3 +161,13 @@ import sklearn.metrics as metrics
 print('MAE:', metrics.mean_absolute_error(y_test, y_pred_logreg))
 print('MSE:', metrics.mean_squared_error(y_test, y_pred_logreg))
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, y_pred_logreg)))
+
+# Classification Report and Confusion Matrix 
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+
+classification_report = classification_report(y_test, y_pred_logreg) 
+confusion_matrix = confusion_matrix(y_test, y_pred_logreg)
+
+print('Classification Report:', classification_report) 
+print('Confusion Matrix', confusion_matrix) 
