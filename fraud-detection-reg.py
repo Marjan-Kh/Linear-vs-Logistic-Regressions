@@ -19,6 +19,9 @@ print(data.info())
 # Shape of the data
 print(data.shape)
 print(data.describe())
+
+# Checking missing values
+print('Missing Values', data.isnull().values.any())
 # ------------------------------------------------------------------------
 # Feature 'Class':
 # A fraud transaction when its value equals 1.
