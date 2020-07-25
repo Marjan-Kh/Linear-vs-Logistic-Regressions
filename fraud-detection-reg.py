@@ -20,8 +20,9 @@ print(data.info())
 print(data.shape)
 print(data.describe())
 # ------------------------------------------------------------------------
-# Feature 'Class' (the response variable):
-# value 1 in case of fraud and 0 otherwise.
+# Feature 'Class':
+# A fraud transaction when its value equals 1.
+# A valid transaction when its value is 0.
 
 # Fraud & non-fraud 
 obs = data['Class'].value_counts()
@@ -51,7 +52,7 @@ sns.distplot(data['Time'].values/(60*60), ax=ax[0], color='g')
 ax[0].set_title('Distribution of Transaction Time', fontsize=14)
 ax[0].set_xlim([min(data['Time'].values/(60*60)), max(data['Time'].values/(60*60))])
 
-# Distribution of Transaction Amount
+# Distribution of Transaction Amount: the price of each transaction
 sns.distplot(data['Amount'].values, ax=ax[1], color='r')
 ax[1].set_title('Distribution of Transaction Amount', fontsize=14)
 ax[1].set_xlim([min(data['Amount'].values), max(data['Amount'].values)])
